@@ -46,6 +46,8 @@ android {
 
 dependencies {
     // Lifecycle
+    implementation(libs.androidx.lifecycle.common)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
 
@@ -67,6 +69,29 @@ dependencies {
 
     //coil
     implementation(libs.coil)
+
+    //dot indicator
+    implementation(libs.dotsindicator)
+
+    //viewpager
+    implementation(libs.androidx.viewpager2)
+
+    // paging
+    implementation(libs.androidx.paging.runtime.ktx)
+
+    // fragment ktx
+    implementation(libs.androidx.fragment.ktx)
+
+    //datastore
+    implementation(libs.androidx.datastore.preferences)
+
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+
+    //okhttp
+    implementation(libs.logging.interceptor)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
