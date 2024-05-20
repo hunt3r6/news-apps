@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/menu_navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.santrikoding.newsapp.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_bookmark"
+        android:name="com.santrikoding.newsapp.ui.bookmark.BookmarkFragment"
+        android:label="Bookmark"
+        tools:layout="@layout/fragment_bookmark" />
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="com.santrikoding.newsapp.ui.category.CategoryFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_category" />
+
 
 </navigation>
