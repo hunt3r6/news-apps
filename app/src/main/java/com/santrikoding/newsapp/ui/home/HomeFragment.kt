@@ -59,7 +59,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun detailArticle(article: ArticleEntity) {
-
+        val action = HomeFragmentDirections.actionNavigationHomeToDetailArticleFragment(article)
+        findNavController().navigate(action)
     }
 
     private fun bookmarked(article: ArticleEntity, position: Int) {
@@ -164,8 +165,7 @@ class HomeFragment : Fragment() {
         btnDarkMode.setOnClickListener {
             viewModel.saveThemeSetting(!isDarkMode)
         }
-        btnSearch.setOnClickListener {
-        }
+        btnSearch.setOnClickListener {}
     }
 
     // Method onDestroyView dipanggil ketika tampilan Fragment dihancurkan

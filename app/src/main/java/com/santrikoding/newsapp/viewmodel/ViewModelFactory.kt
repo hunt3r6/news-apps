@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.santrikoding.newsapp.data.Repository
 import com.santrikoding.newsapp.di.Injection
+import com.santrikoding.newsapp.ui.detail.DetailViewModel
 import com.santrikoding.newsapp.ui.home.HomeViewModel
 import com.santrikoding.newsapp.utils.SettingPreferences
 
@@ -29,6 +30,9 @@ class ViewModelFactory(
         return when {
             modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
                 HomeViewModel(repository, settingPreferences) as T
+            }
+            modelClass.isAssignableFrom(DetailViewModel::class.java) -> {
+                DetailViewModel(repository) as T
             }
 
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
